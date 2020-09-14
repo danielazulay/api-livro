@@ -7,7 +7,7 @@ http post - login  :validaçao de usuario
 
 http post - criarlivro : titulo e editora.
 
-http get - listarlivro: listar livro cadastrado pelo author
+http get - listarlivro: listar livro cadastrado pelo usuario
 
 
 
