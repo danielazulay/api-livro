@@ -1,5 +1,13 @@
-<<<<<<< HEAD
-# git
-=======
+
 # api-livro
->>>>>>> d0ac3227fc3c977e98bfd9ac564c9b85576819db
+
+http post - cadastro de usuario: nome , email, senha(hash) com token de validaçao
+
+http post - login  :validaçao de usuario
+
+http post - criarlivro : titulo e editora.
+
+http get - listarlivro: listar livro cadastrado pelo author
+
+
+
