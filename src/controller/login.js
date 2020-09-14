@@ -19,28 +19,10 @@ expiresIn:86400,
     });
 }
 
-routerUsuario.post('/register',async(req,res)=>{
-const {email} = req.body;
-
-try{
-
-    if(await usuario.findOne({email})){
-
-        return res.status(400).send({error: 'usuario ja existe'});
-    }
-const user =  await usuario.create(req.body);
-user.password=undefined;
-
-return res.send({user,token: generateToken({id: user.id}),
-});
-
-}catch(err){
-return res.status(400).send({error:'registration failed'});
-}
-});
 
 
-routerUsuario.post('/autenticacao',async(req,res)=>{
+
+routerUsuario.post('/',async(req,res)=>{
 
     const{email,password}=req.body;
 
@@ -66,4 +48,4 @@ routerUsuario.post('/autenticacao',async(req,res)=>{
 
 
 
-module.exports= app => app.use('/auth',routerUsuario);
+module.exports= app => app.use('/login',routerUsuario);
